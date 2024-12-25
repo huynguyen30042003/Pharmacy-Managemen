@@ -1,0 +1,11 @@
+@import '../../../styles/colors.scss';
+
+
+.login_form{
+  width: 632px;
+  max-width: calc(100vw - 64px);
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
