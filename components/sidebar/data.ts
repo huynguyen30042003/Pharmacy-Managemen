@@ -73,5 +73,26 @@ export const sidebarData: SidebarItem[] = [
   },{
     title: "Settings",
     icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
+  },{
+    title: "Settings",
+    icon: "/sidebar_setting.svg",
   }
 ];
