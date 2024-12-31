@@ -1,4 +1,6 @@
 .style_layout{
   display: flex;
-  flex-direction: column;
+  .style_layout_main{
+    width: 100%;
+  }
 }
