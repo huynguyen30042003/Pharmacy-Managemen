@@ -1,0 +1,10 @@
+.inputForm {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  .title {
+    color: #323343;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

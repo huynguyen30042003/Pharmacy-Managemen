@@ -1,5 +1,6 @@
 export interface Detail {
   title: string; // Tiêu đề của mục con
+  link?: string;
 }
 
 export interface SidebarItem {
@@ -16,7 +17,7 @@ export const sidebarData: SidebarItem[] = [
   {
     title: "Purchase",
     icon: "/shopping-cart.svg",
-    details: [{ title: "Purchase List" }, { title: "Payment" }, { title: "Purchase Return" },{ title: "Return Receive" }],
+    details: [{ title: "Purchase List",link: "purchaseList" }, { title: "Payment" }, { title: "Purchase Return" },{ title: "Return Receive" }],
   },
   {
     title: "Dispenser",
@@ -36,7 +37,9 @@ export const sidebarData: SidebarItem[] = [
     title: "Reports",
     icon: "/clipboard-text.svg",
     details: [
-      { title: "Sales Report" },
+      { title: "Sales Report",
+        link: "salesReport" 
+       },
       { title: "Sales Return Report" },
       { title: "Purchase Report" },
     ],
@@ -70,27 +73,6 @@ export const sidebarData: SidebarItem[] = [
       { title: "Payroll" },
       { title: "Expense" },
     ],
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
-  },{
-    title: "Settings",
-    icon: "/sidebar_setting.svg",
   },{
     title: "Settings",
     icon: "/sidebar_setting.svg",

@@ -2,15 +2,20 @@
 import React,{useState} from 'react'
 import style from './Input.module.scss'
 interface InputProps {
-  type?: string; // Kiểu input (text, password, email, ...)
-  valueLabel?: string; // Tùy chỉnh CSS
+  type?: string; 
+  valueLabel?: string;
+  list?: string;
+  id?: string;
+  width?:string;
 }
-const Input: React.FC<InputProps> = ({ type, valueLabel }) => {
+const Input: React.FC<InputProps> = ({ type, valueLabel, list,id,width }) => {
   const [value, setValue] = useState('');
   return (
     <>
-    <div className={style.input_container}>
+    <div style={{width}} className={style.input_container}>
       <input
+          id={id}
+          list={list}
           type={type}
           value={value}
           onChange={(e) => setValue(e.target.value)}

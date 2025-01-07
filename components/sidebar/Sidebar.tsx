@@ -3,7 +3,7 @@ import React,{useState} from "react";
 import style from "./Sidebar.module.scss";
 import Image from "next/image";
 import { SidebarItem, sidebarData } from './data';
-
+import Link from "next/link";
 
 function Sidebar() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -24,7 +24,7 @@ function Sidebar() {
           className={style.imageLogo}
         />
         {sidebarData.map((item: SidebarItem, index: number) => (
-          <div  >
+          <div key={index}>
             <div className={style.select} onClick={() => item.details && toggleDetails(index)}>
               <div className={style.title}>
                 <Image
@@ -50,9 +50,11 @@ function Sidebar() {
              {item.details && openIndex === index && (
               <ul className={style.details}>
                 {item.details.map((detail, idx) => (
-                  <li key={idx} className={style.detailItem}>
-                    {detail.title}
-                  </li>
+                  <Link href={`/${detail.link}`}>
+                    <li key={idx} className={style.detailItem} >
+                      {detail.title}
+                    </li>
+                  </Link>
                 ))}
               </ul>
             )}
