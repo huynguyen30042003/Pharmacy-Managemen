@@ -26,7 +26,7 @@ const page: React.FC = () => {
       >
         <Input type="date" mindate="2018-01-01" ></Input>
         <InputForm title="input form" type="text"></InputForm>
-        <DataList width="200px" label="form" options={option} ></DataList>
+        <DataList minWidth="200px" label="form" options={option} ></DataList>
       </Popup>
     </div>
   );

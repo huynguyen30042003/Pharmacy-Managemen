@@ -4,13 +4,13 @@ import Input from '../input/Input';
 interface InputFormprops {
   title: string;
   type:string;
-  width?: string
+  minWidth?: string
 }
-const InputForm:React.FC<InputFormprops>=({title,type,width})=> {
+const InputForm:React.FC<InputFormprops>=({title,type,minWidth})=> {
   return (
-   <div className={style.inputForm} >
+   <div className={style.inputForm}>
     <label className={style.title} htmlFor="search">{title}</label>
-    <Input width={width} type={type}></Input>
+    <Input minWidth={minWidth} type={type}></Input>
    </div>
   )
 }
