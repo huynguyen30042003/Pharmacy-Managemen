@@ -24,7 +24,7 @@ const page: React.FC = () => {
         width="430px"
         header={headerPopup}
       >
-        <Input type="text" valueLabel="dauid"></Input>
+        <Input type="date" mindate="2018-01-01" ></Input>
         <InputForm title="input form" type="text"></InputForm>
         <DataList width="200px" label="form" options={option} ></DataList>
       </Popup>

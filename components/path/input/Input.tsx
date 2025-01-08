@@ -7,13 +7,15 @@ interface InputProps {
   list?: string;
   id?: string;
   width?:string;
+  mindate?:string;
 }
-const Input: React.FC<InputProps> = ({ type, valueLabel, list,id,width }) => {
+const Input: React.FC<InputProps> = ({ type, valueLabel, list,id,width,mindate }) => {
   const [value, setValue] = useState('');
   return (
     <>
     <div style={{width}} className={style.input_container}>
       <input
+          min={mindate}
           id={id}
           list={list}
           type={type}
