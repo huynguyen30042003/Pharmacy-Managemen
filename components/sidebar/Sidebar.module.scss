@@ -1,81 +1,60 @@
 .sidebar {
-  width: 220px;
-  height: 100%;
-  background-color: #ffffff;
-  .Logo_dashboard {
-    margin-top: 18px;
-    margin-left: 22px;
-  }
-  .sideBarList {
-    display: grid;
-    justify-content: center;
-    row-gap: 10px;
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 12px;
-    .active {
-      .navLink {
-        background-color: #5065f6;
-        span {
-          color: #ffffff;
-        }
-        img {
-          filter: brightness(0) invert(1); // Đổi màu ảnh thành trắng
-        }
-      }
+  background-color: #fff;
+  .container {
+    height: 100vh;
+    overflow: auto;
+    box-sizing: border-box;
+    width: 220px;
+    padding: 0 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .imageLogo {
+      padding-left: 11px;
+      padding-top: 28px;
     }
-    .navItem {
-      height: 100%;
-      border-radius: 6px;
-
-      .navLink {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #757b82;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 26px;
-        padding: 10px;
-        border-radius: 6px;
-        cursor: pointer;
-        span {
-          margin-right: auto;
-        }
-        img:nth-child(1) {
-          margin-right: 10px;
-        }
-        img:last-child {
-          margin-left: 10px;
-        }
-        &:hover {
-          background-color: #5065f6;
-          border-radius: 6px;
-          color: #ffffff;
-          text-decoration: none;
-          img {
-            filter: brightness(0) invert(1); // Đổi màu ảnh thành trắng
-          }
-        }
-      }
-      .subList {
-        display: none;
-        list-style-type: none;
-        a {
-          display: block;
-          color: #757b82;
-          text-decoration: none;
-          width: 100%;
-          border-radius: 8px;
-          padding: 10px 0 10px 10px;
-          &:hover {
-            background-color: #f3f3f7;
-          }
-        }
-      }
-      .show {
-        display: block;
-      }
+  }
+  .select {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    width: 100%;
+    padding: 0 12px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .up {
+      transform: rotate(180deg);
+    }
+  }
+  .select:hover {
+    background-color: #5065f6;
+    color: #fff;
+    .image {
+      filter: invert(100%) brightness(200%);
+    }
+  }
+  .details {
+    padding-left: 36px;
+    margin: 0;
+    padding-top: 4px;
+    .detailItem {
+      cursor: pointer;
+      height: 40px;
+      padding-left: 12px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+    }
+    .detailItem:hover {
+      background-color: #f3f3f7;
     }
   }
 }

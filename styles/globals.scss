@@ -10,10 +10,17 @@ body {
 }
 
 a {
-    color: $primary-color;
+    color: $text-color;
     text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
 
-    &:hover {
-        text-decoration: underline;
-    }
+.section{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    flex-wrap: wrap;
 }

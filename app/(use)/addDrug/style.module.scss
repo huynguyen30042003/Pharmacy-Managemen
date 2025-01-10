@@ -1,0 +1,16 @@
+.input_container {
+  .input_row:not(:last-child) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px 30px;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 576px) {
+    .input_row:not(:last-child) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
