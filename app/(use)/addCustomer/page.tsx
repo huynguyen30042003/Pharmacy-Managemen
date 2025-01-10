@@ -29,11 +29,13 @@ const page: React.FC = () => {
       >
         <Section>
           <InputForm
+            minWidth="280px"
             title="Customer Name"
             type="text"
             placeholder="vd: Ho Ngoc Minh"
           ></InputForm>
           <InputForm
+            minWidth="280px"
             title="Mobile No"
             type="text"
             placeholder="Phone Number"
@@ -41,11 +43,13 @@ const page: React.FC = () => {
         </Section>
         <Section>
           <InputForm
+            minWidth="280px"
             title="Email Address"
             type="text"
             placeholder="vd: DaNang@gmail.com"
           ></InputForm>
           <InputForm
+            minWidth="280px"
             title="Fax"
             type="text"
             placeholder="efax@fax.com"
@@ -53,19 +57,29 @@ const page: React.FC = () => {
         </Section>
         <Section>
           <InputForm
+            minWidth="280px"
             title="Address Line 1"
             type="text"
             placeholder="Address Line 1"
           ></InputForm>
           <InputForm
+            minWidth="280px"
             title="Address Line 2"
             type="text"
             placeholder="Address Line 2"
           ></InputForm>
         </Section>
         <Section>
-          <DataList label="Country" options={option}></DataList>
-          <DataList label="Previous Balnce" options={option}></DataList>
+          <DataList
+            minWidth="280px"
+            label="Country"
+            options={option}
+          ></DataList>
+          <DataList
+            label="Previous Balnce"
+            minWidth="280px"
+            options={option}
+          ></DataList>
         </Section>
       </Popup>
     </div>

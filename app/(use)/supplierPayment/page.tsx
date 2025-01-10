@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import style from "./style.module.scss";
 import Popup from "@/components/path/popup/Popup";
 import Button from "@/components/path/button/Button";
 import Input from "@/components/path/input/Input";
