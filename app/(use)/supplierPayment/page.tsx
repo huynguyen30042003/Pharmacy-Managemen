@@ -20,7 +20,7 @@ const page: React.FC = () => {
     <div>
       <Button
         width="300px"
-        text="Open Popup" 
+        text="Open Popup"
         onClick={handleOpenPopup}
       ></Button>
       <Popup
@@ -43,7 +43,11 @@ const page: React.FC = () => {
             title="Supplier Name"
             type="text"
           ></InputForm>
-          <DataList minWidth="280px" label="Select Account" options={option}></DataList>
+          <DataList
+            minWidth="280px"
+            label="Select Account"
+            options={option}
+          ></DataList>
         </Section>
         <Section>
           <InputForm
@@ -51,19 +55,19 @@ const page: React.FC = () => {
             title="Mobile Number"
             type="text"
           ></InputForm>
-           <InputForm
+          <InputForm
             minWidth="280px"
             title="Receivable Amount"
             type="money"
           ></InputForm>
         </Section>
         <Section>
-          <InputForm
+          <InputForm minWidth="280px" title="Advanced" type="text"></InputForm>
+          <DataList
             minWidth="280px"
-            title="Advanced"
-            type="text"
-          ></InputForm>
-          <DataList minWidth="280px" label="Payment Method" options={option}></DataList>
+            label="Payment Method"
+            options={option}
+          ></DataList>
         </Section>
         <Section>
           <InputForm
@@ -71,7 +75,7 @@ const page: React.FC = () => {
             title="Previous Due"
             type="money"
           ></InputForm>
-           <InputForm
+          <InputForm
             minWidth="280px"
             title="Current Balance"
             type="text"
