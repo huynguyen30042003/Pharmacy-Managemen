@@ -5,14 +5,20 @@ interface InputFormprops {
   title: string;
   type: string;
   minWidth?: string;
+  placeholder?: string;
 }
-const InputForm: React.FC<InputFormprops> = ({ title, type, minWidth }) => {
+const InputForm: React.FC<InputFormprops> = ({
+  title,
+  type,
+  minWidth,
+  placeholder,
+}) => {
   return (
     <div className={style.inputForm}>
       <label className={style.title} htmlFor="search">
         {title}
       </label>
-      <Input minWidth={minWidth} type={type}></Input>
+      <Input minWidth={minWidth} type={type} placeholder={placeholder}></Input>
     </div>
   );
 };
