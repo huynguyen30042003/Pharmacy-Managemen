@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import style from "./style.module.scss";
 import Popup from "@/components/path/popup/Popup";
 import Button from "@/components/path/button/Button";
 import Input from "@/components/path/input/Input";
@@ -14,7 +15,7 @@ const page: React.FC = () => {
   const handleOpenPopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
-  const headerPopup = "Supplier Payment";
+  const headerPopup = "Add Attendend";
   return (
     <div>
       <Button
@@ -25,59 +26,28 @@ const page: React.FC = () => {
       <Popup
         isOpen={isPopupOpen}
         handleOpenPopup={handleOpenPopup}
-        width="630px"
+        width="390px"
         header={headerPopup}
       >
         <Section>
-          <InputForm
-            minWidth="280px"
-            title="Supplier Name"
-            type="text"
-          ></InputForm>
-          <Input minWidth="280px" type="date"></Input>
-        </Section>
-        <Section>
-          <InputForm
-            minWidth="280px"
-            title="Supplier Name"
-            type="text"
-          ></InputForm>
           <DataList
             minWidth="280px"
-            label="Select Account"
+            label="Employee"
             options={option}
           ></DataList>
         </Section>
         <Section>
           <InputForm
             minWidth="280px"
-            title="Mobile Number"
-            type="text"
-          ></InputForm>
-          <InputForm
-            minWidth="280px"
-            title="Receivable Amount"
-            type="money"
+            title="Date & Time"
+            type="date"
           ></InputForm>
         </Section>
         <Section>
-          <InputForm minWidth="280px" title="Advanced" type="text"></InputForm>
-          <DataList
-            minWidth="280px"
-            label="Payment Method"
-            options={option}
-          ></DataList>
-        </Section>
-        <Section>
           <InputForm
             minWidth="280px"
-            title="Previous Due"
-            type="money"
-          ></InputForm>
-          <InputForm
-            minWidth="280px"
-            title="Current Balance"
-            type="text"
+            title="Start Time"
+            type="time"
           ></InputForm>
         </Section>
       </Popup>

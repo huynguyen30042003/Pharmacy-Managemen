@@ -1,9 +1,9 @@
 .input_container {
   position: relative;
-  flex:1;
+  flex: 1;
   label {
     position: absolute;
-    top: 16px;
+    top: 9px;
     left: 26px;
     font-size: 16px;
     color: gray;
@@ -14,10 +14,10 @@
     height: 38px;
     box-sizing: border-box;
     border: 1px solid #c8cacd;
-    border-radius: 15px;
+    border-radius: 4px;
     background: transparent;
     width: 100%;
-    padding: 8px 16px 5px 16px;
+    padding: 5px 16px 5px 16px;
     font-size: 16px;
     color: gray;
   }

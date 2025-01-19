@@ -14,7 +14,7 @@ const page: React.FC = () => {
   const handleOpenPopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
-  const headerPopup = "Supplier Payment";
+  const headerPopup = "Add Menufacturer";
   return (
     <div>
       <Button
@@ -25,58 +25,37 @@ const page: React.FC = () => {
       <Popup
         isOpen={isPopupOpen}
         handleOpenPopup={handleOpenPopup}
-        width="630px"
+        width="424px"
         header={headerPopup}
       >
         <Section>
           <InputForm
             minWidth="280px"
-            title="Supplier Name"
+            title="Menufacturer Name"
             type="text"
           ></InputForm>
-          <Input minWidth="280px" type="date"></Input>
         </Section>
         <Section>
           <InputForm
             minWidth="280px"
-            title="Supplier Name"
+            title="Email Address"
+            type="email"
+          ></InputForm>
+        </Section>
+        <Section>
+          <InputForm minWidth="280px" title="Phone" type="text"></InputForm>
+        </Section>
+        <Section>
+          <InputForm
+            minWidth="280px"
+            title="Address line"
             type="text"
           ></InputForm>
-          <DataList
-            minWidth="280px"
-            label="Select Account"
-            options={option}
-          ></DataList>
         </Section>
         <Section>
           <InputForm
             minWidth="280px"
-            title="Mobile Number"
-            type="text"
-          ></InputForm>
-          <InputForm
-            minWidth="280px"
-            title="Receivable Amount"
-            type="money"
-          ></InputForm>
-        </Section>
-        <Section>
-          <InputForm minWidth="280px" title="Advanced" type="text"></InputForm>
-          <DataList
-            minWidth="280px"
-            label="Payment Method"
-            options={option}
-          ></DataList>
-        </Section>
-        <Section>
-          <InputForm
-            minWidth="280px"
-            title="Previous Due"
-            type="money"
-          ></InputForm>
-          <InputForm
-            minWidth="280px"
-            title="Current Balance"
+            title="Previous Balance"
             type="text"
           ></InputForm>
         </Section>

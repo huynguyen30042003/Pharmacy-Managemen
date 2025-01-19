@@ -1,19 +1,38 @@
 "use client";
+
 import Button from "@/components/path/button/Button";
 import DataList from "@/components/path/datalist/DataList";
 import InputForm from "@/components/path/inputFrom/InputForm";
 import Popup from "@/components/path/popup/Popup";
-import React, { useState } from "react";
-import style from "./style.module.scss";
+import React from "react";
+import Section from "@/components/section/Section";
+import { useAddDrug } from "@/hooks/useAddDrug";
 
 const page: React.FC = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
-  const headerPopup = "Add New Drug";
-  const option = ["option1", "on2", "op3", "option4"];
+  const {
+    headerPopup,
+    isPopupOpen,
+    reference,
+    setReference,
+    handleOpenPopup,
+    handleSave,
+    date,
+    setDate,
+    productName,
+    setProductName,
+    available,
+    setAvailable,
+    type,
+    setType,
+    damegeQuantity,
+    setDamegeQuantity,
+    description,
+    setDescription,
+    optionProductName,
+    optionType,
+    optionDamegeQuantity,
+  } = useAddDrug();
 
-  const handleOpenPopup = () => {
-    setIsPopupOpen(!isPopupOpen);
-  };
   return (
     <div>
       <Button
@@ -24,26 +43,67 @@ const page: React.FC = () => {
       <Popup
         isOpen={isPopupOpen}
         handleOpenPopup={handleOpenPopup}
-        width="430px"
+        width="630px"
         header={headerPopup}
+        onClick={handleSave}
       >
-        <div className={style.input_container}>
-          <div className={style.input_row}>
-            <DataList label="Reference No" options={option}></DataList>
-            <InputForm title="Date" type="date"></InputForm>
-          </div>
-          <div className={style.input_row}>
-            <DataList label="Product Name" options={option}></DataList>
-            <InputForm title="Available" type="text"></InputForm>
-          </div>
-          <div className={style.input_row}>
-            <DataList label="Type" options={option}></DataList>
-            <DataList label="Damage Quantity" options={option}></DataList>
-          </div>
-          <div className={style.input_row}>
-            <InputForm title="Description" type="text"></InputForm>
-          </div>
-        </div>
+        <Section>
+          <InputForm
+            value={reference}
+            setValue={setReference}
+            title="Reference No"
+            type="number"
+            minWidth="280px"
+          ></InputForm>
+          <InputForm
+            value={date}
+            setValue={setDate}
+            title="Date"
+            type="date"
+            minWidth="280px"
+          ></InputForm>
+        </Section>
+        <Section>
+          <DataList
+            value={productName}
+            setValue={setProductName}
+            label="Product Name"
+            options={optionProductName}
+            minWidth="280px"
+          ></DataList>
+          <InputForm
+            value={available}
+            setValue={setAvailable}
+            title="Available"
+            type="text"
+            minWidth="280px"
+          ></InputForm>
+        </Section>
+        <Section>
+          <DataList
+            value={type}
+            setValue={setType}
+            label="Type"
+            options={optionType}
+            minWidth="280px"
+          ></DataList>
+          <DataList
+            value={damegeQuantity}
+            setValue={setDamegeQuantity}
+            label="Damage Quantity"
+            options={optionDamegeQuantity}
+            minWidth="280px"
+          ></DataList>
+        </Section>
+        <Section>
+          <InputForm
+            value={description}
+            setValue={setDescription}
+            title="Description"
+            type="text"
+            minWidth="280px"
+          ></InputForm>
+        </Section>
       </Popup>
     </div>
   );

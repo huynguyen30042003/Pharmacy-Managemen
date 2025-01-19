@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import style from "./style.module.scss";
 import Popup from "@/components/path/popup/Popup";
 import Button from "@/components/path/button/Button";
 import Input from "@/components/path/input/Input";
@@ -14,7 +15,7 @@ const page: React.FC = () => {
   const handleOpenPopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
-  const headerPopup = "Supplier Payment";
+  const headerPopup = "Customer Due Collection";
   return (
     <div>
       <Button
@@ -31,22 +32,18 @@ const page: React.FC = () => {
         <Section>
           <InputForm
             minWidth="280px"
-            title="Supplier Name"
+            title="Customer Name"
             type="text"
           ></InputForm>
-          <Input minWidth="280px" type="date"></Input>
+          <InputForm minWidth="280px" title="Date" type="date"></InputForm>
         </Section>
         <Section>
           <InputForm
             minWidth="280px"
-            title="Supplier Name"
+            title="Customer Code"
             type="text"
           ></InputForm>
-          <DataList
-            minWidth="280px"
-            label="Select Account"
-            options={option}
-          ></DataList>
+          <InputForm minWidth="280px" title="Amount" type="text"></InputForm>
         </Section>
         <Section>
           <InputForm
@@ -67,18 +64,6 @@ const page: React.FC = () => {
             label="Payment Method"
             options={option}
           ></DataList>
-        </Section>
-        <Section>
-          <InputForm
-            minWidth="280px"
-            title="Previous Due"
-            type="money"
-          ></InputForm>
-          <InputForm
-            minWidth="280px"
-            title="Current Balance"
-            type="text"
-          ></InputForm>
         </Section>
       </Popup>
     </div>

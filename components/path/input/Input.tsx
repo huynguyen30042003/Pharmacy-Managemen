@@ -1,32 +1,49 @@
-"use client"
-import React,{useState} from 'react'
-import style from './Input.module.scss'
+"use client";
+import React, { useState } from "react";
+import style from "./Input.module.scss";
 interface InputProps {
-  type?: string; 
+  type?: string;
   valueLabel?: string;
   list?: string;
   id?: string;
-  minWidth?:string;
-  mindate?:string;
+  minWidth?: string;
+  maxWidth?: string;
+  width?: string;
+  mindate?: string;
+  placeholder?: string;
+  value?: string;
+  setValue(value: any): void;
 }
-const Input: React.FC<InputProps> = ({ type, valueLabel, list,id,minWidth,mindate }) => {
-  const [value, setValue] = useState('');
+const Input: React.FC<InputProps> = ({
+  type,
+  valueLabel,
+  list,
+  id,
+  minWidth,
+  maxWidth,
+  width,
+  mindate,
+  placeholder,
+  value="",
+  setValue,
+}) => {
   return (
     <>
-    <div style={{minWidth}} className={style.input_container}>
-      <input
+      <div style={{ minWidth, maxWidth, width }} className={style.input_container}>
+        <input
           min={mindate}
           id={id}
           list={list}
           type={type}
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          placeholder={placeholder}
+          onChange={(e)=>setValue(e.target.value)}
           required
         />
-		 <label className={value ? style.filled : ''}>{valueLabel}</label>		
-	</div>
-      </>
+        <label className={value ? style.filled : ""}>{valueLabel}</label>
+      </div>
+    </>
   );
 };
 
-export default Input
+export default Input;
