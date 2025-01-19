@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Popup.module.scss";
-import styleButton from "../button/Button.module.scss"
+import styleButton from "../button/Button.module.scss";
 import Button from "../button/Button";
 interface PopupProps {
   isOpen: boolean;
@@ -21,9 +21,6 @@ const Popup: React.FC<PopupProps> = ({
   handleOpenPopup,
   onClick,
 }) => {
-
-
-
   if (!isOpen) return null;
   return (
     <div className={style.popup} onClick={handleOpenPopup}>
@@ -37,8 +34,15 @@ const Popup: React.FC<PopupProps> = ({
         </div>
         <div className={style.popupContent}>{children}</div>
         <div className={style.popupFooter}>
-          <Button styles={`${styleButton.gray}`} text='Close' onClick={handleOpenPopup}></Button>
-          <Button   text='Save' onClick={onClick}></Button>
+          <Button
+            width="100%"
+            styles={`${styleButton.gray}`}
+            text="Close"
+            onClick={handleOpenPopup}
+            backgroundColor="#F5F5F5"
+            color="#323343"
+          ></Button>
+          <Button width="100%" text="Save" onClick={onClick}></Button>
         </div>
       </div>
     </div>

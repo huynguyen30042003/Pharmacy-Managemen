@@ -2,8 +2,8 @@ import { Table, TableColumnsType, TableProps } from "antd";
 import React from "react";
 import { useState } from "react";
 
-
-type TableRowSelection<T extends object = object> = TableProps<T>['rowSelection'];
+type TableRowSelection<T extends object = object> =
+  TableProps<T>["rowSelection"];
 
 export interface DataTypeTableProduct {
   key: React.Key;
@@ -18,171 +18,31 @@ export interface DataTypeTableProduct {
 }
 
 const columns: TableColumnsType<DataTypeTableProduct> = [
-  { title: 'Supplier', dataIndex: 'supplier', },
-  { title: 'Name', dataIndex: 'name', },
-  { title: 'Brand', dataIndex: 'brand', },
-  { title: 'Product Code', dataIndex: 'productCode', },
-  { title: 'Expire Date', dataIndex: 'expireDate', },
-  { title: 'Product Type', dataIndex: 'productType', },
-  { title: 'Price', dataIndex: 'price', },
+  { title: "Supplier", dataIndex: "supplier" },
+  { title: "Name", dataIndex: "name" },
+  { title: "Brand", dataIndex: "brand" },
+  { title: "Product Code", dataIndex: "productCode" },
+  { title: "Expire Date", dataIndex: "expireDate" },
+  { title: "Product Type", dataIndex: "productType" },
+  { title: "Price", dataIndex: "price" },
 ];
 
 const dataSource =[
   { key: '1', supplier: 'A', name: 'B', brand: 'C', productCode: 'D', expireDate: 'E', productType: 'F', price: 100, action: 'View/Edit' },
   { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
-  { key: '2', supplier: 'G', name: 'H', brand: 'I', productCode: 'J', expireDate: 'K', productType: 'L', price: 200, action: 'View/Edit' },
 ]
 
-export const useProductList = () =>{
-  const [product,setProduct] = useState<string>("");
-  const [productCode,setProductCode] = useState<string>("");
-  const [dateTime,setDateTime] = useState<string>("");
+export const useProductList = () => {
+  const [product, setProduct] = useState<string>("");
+  const [productCode, setProductCode] = useState<string>("");
+  const [dateTime, setDateTime] = useState<string>("");
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
-  const tblRef: Parameters<typeof Table>[0]['ref'] = React.useRef(null);
-  
+  const tblRef: Parameters<typeof Table>[0]["ref"] = React.useRef(null);
+  const [isPopupProductListOpen, setIsPopupProductListOpen] =
+    useState<boolean>(false);
+
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
-    console.log('selectedRowKeys changed: ', newSelectedRowKeys);
+    console.log("selectedRowKeys changed: ", newSelectedRowKeys);
     setSelectedRowKeys(newSelectedRowKeys);
   };
 
@@ -192,9 +52,19 @@ export const useProductList = () =>{
   };
 
   const hanldeAdd = () => {
-      console.log("handleAdd");
-      
-  }
+    console.log("handleAdd");
+    setIsPopupProductListOpen(false);
+  };
+
+  const handleSearch = () => {
+    console.log("handleSearch");
+  };
+
+  const handleOpenPopup = () => {
+    setIsPopupProductListOpen(!isPopupProductListOpen);
+  };
+
+  const headerPopupProductList = "Add Product List";
   return {
     product,
     setProduct,
@@ -206,6 +76,10 @@ export const useProductList = () =>{
     columns,
     tblRef,
     dataSource,
-    hanldeAdd
-  }
-}
+    hanldeAdd,
+    handleOpenPopup,
+    headerPopupProductList,
+    isPopupProductListOpen,
+    handleSearch,
+  };
+};

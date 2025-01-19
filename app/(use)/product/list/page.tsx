@@ -7,6 +7,7 @@ import style from "./style.module.scss";
 import { Table } from "antd";
 import Image from "next/image";
 import Button from "@/components/path/button/Button";
+import AddProductList from "@/components/popup/AddProductList";
 
 const page = () => {
   const {
@@ -21,6 +22,10 @@ const page = () => {
     tblRef,
     dataSource,
     hanldeAdd,
+    handleOpenPopup,
+    headerPopupProductList,
+    isPopupProductListOpen,
+    handleSearch
   } = useProductList();
 
   return (
@@ -49,7 +54,7 @@ const page = () => {
             setValue={setDateTime}
           ></InputForm>
 
-          <div className={style.search}>
+          <div className={style.search} onClick={handleSearch}>
             <Image
               src="/search.svg"
               alt="colorfilter icon"
@@ -60,7 +65,19 @@ const page = () => {
             />
           </div>
         </div>
-        <Button iconAdd={true} width="126px" height="40px" text="Add Product" onClick={hanldeAdd}/>
+        <Button
+          iconAdd={true}
+          width="126px"
+          height="40px"
+          text="Add Product"
+          onClick={handleOpenPopup}
+        />
+        <AddProductList
+          handleOpenPopup={handleOpenPopup}
+          headerPopup={headerPopupProductList}
+          isOpen={isPopupProductListOpen}
+          onClick={hanldeAdd}
+        />
       </div>
       <Table<DataTypeTableProduct>
         scroll={{ x: "100%", y: "calc(100vh - 305px)" }}

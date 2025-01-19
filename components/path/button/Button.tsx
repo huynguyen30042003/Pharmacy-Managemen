@@ -3,12 +3,14 @@ import style from "./Button.module.scss";
 import Image from "next/image";
 
 interface ButtonProps {
-  height?:string;
+  height?: string;
   width?: string;
   styles?: string;
   text: string;
   onClick: (e: any) => void;
   iconAdd?: boolean | string;
+  backgroundColor?: string;
+  color?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,16 +19,25 @@ const Button: React.FC<ButtonProps> = ({
   styles,
   width,
   iconAdd,
-  height
+  height,
+  backgroundColor,
+  color,
 }) => {
   return (
-    <div style={{ width,height }} className={`${style.button} ${styles || ""}`} onClick={(e) => onClick(e)}>
+    <div
+      className={style.button}
+      style={{ width, height, backgroundColor, color }}
+      onClick={(e) => onClick(e)}
+    >
       {iconAdd ? (
         <Image src="/add.svg" alt="add icon" width={20} height={20} priority />
       ) : (
         <></>
       )}
-      <button style={{ width,height }} >
+      <button
+        style={{  height, backgroundColor, color }}
+        className={style.buttonText}
+      >
         {text}
       </button>
     </div>
