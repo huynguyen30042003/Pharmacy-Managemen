@@ -9,7 +9,9 @@ function layout({ children }: { children: React.ReactNode }) {
       <Sidebar />
       <div className={style.style_layout_main}>
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <div className={style.container}>{children}</div>
+        </main>
       </div>
     </div>
   );

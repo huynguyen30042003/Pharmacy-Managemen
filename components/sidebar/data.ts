@@ -28,9 +28,9 @@ export const sidebarData: SidebarItem[] = [
     title: "Product",
     icon: "/box.svg",
     details: [
-      { title: "Product List" },
-      { title: "Product Package" },
-      { title: "Product Damages" },
+      { title: "Product List",link: "product/list" },
+      { title: "Product Package",link: "product/package" },
+      { title: "Product Damages" ,link: "product/damages"},
     ],
   },
   {

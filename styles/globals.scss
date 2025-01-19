@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: $background-color-defaul;
+    background-color: $background;
     color: $text-color;
     min-height: 100vh;
 }
@@ -23,4 +23,7 @@ ul{
     align-items: flex-end;
     gap: 30px;
     flex-wrap: wrap;
+}
+.ant-table-cell{
+    white-space: nowrap;
 }

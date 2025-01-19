@@ -7,8 +7,12 @@ interface InputProps {
   list?: string;
   id?: string;
   minWidth?: string;
+  maxWidth?: string;
+  width?: string;
   mindate?: string;
   placeholder?: string;
+  value?: string;
+  setValue(value: any): void;
 }
 const Input: React.FC<InputProps> = ({
   type,
@@ -16,13 +20,16 @@ const Input: React.FC<InputProps> = ({
   list,
   id,
   minWidth,
+  maxWidth,
+  width,
   mindate,
   placeholder,
+  value="",
+  setValue,
 }) => {
-  const [value, setValue] = useState("");
   return (
     <>
-      <div style={{ minWidth }} className={style.input_container}>
+      <div style={{ minWidth, maxWidth, width }} className={style.input_container}>
         <input
           min={mindate}
           id={id}
@@ -30,7 +37,7 @@ const Input: React.FC<InputProps> = ({
           type={type}
           value={value}
           placeholder={placeholder}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e)=>setValue(e.target.value)}
           required
         />
         <label className={value ? style.filled : ""}>{valueLabel}</label>
