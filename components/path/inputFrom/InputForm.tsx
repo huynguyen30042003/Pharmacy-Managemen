@@ -22,7 +22,7 @@ const InputForm: React.FC<InputFormprops> = ({
   setValue,
 }) => {
   return (
-    <div style={{ minWidth, maxWidth, width }} className={style.inputForm} >
+    <div  className={style.inputForm} >
       <label className={style.title} htmlFor="search">
         {title}
       </label>

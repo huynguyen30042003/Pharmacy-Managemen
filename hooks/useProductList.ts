@@ -39,7 +39,7 @@ export const useProductList = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState<React.Key[]>([]);
   const tblRef: Parameters<typeof Table>[0]["ref"] = React.useRef(null);
   const [isPopupProductListOpen, setIsPopupProductListOpen] =
-    useState<boolean>(false);
+    useState<boolean>(true);
 
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
     console.log("selectedRowKeys changed: ", newSelectedRowKeys);

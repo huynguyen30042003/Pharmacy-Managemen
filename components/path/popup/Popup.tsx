@@ -11,7 +11,7 @@ interface PopupProps {
   header: string;
   // title?: string,
   // closeButton?: boolean,
-  onClick: () => void;
+  handleSave: () => void;
 }
 const Popup: React.FC<PopupProps> = ({
   width,
@@ -19,10 +19,12 @@ const Popup: React.FC<PopupProps> = ({
   isOpen,
   children,
   handleOpenPopup,
-  onClick,
+  handleSave,
 }) => {
   if (!isOpen) return null;
   return (
+    <div>
+
     <div className={style.popup} onClick={handleOpenPopup}>
       <div
         className={style.popupInner}
@@ -42,9 +44,10 @@ const Popup: React.FC<PopupProps> = ({
             backgroundColor="#F5F5F5"
             color="#323343"
           ></Button>
-          <Button width="100%" text="Save" onClick={onClick}></Button>
+          <Button width="100%" text="Save" onClick={handleSave}></Button>
         </div>
       </div>
+    </div>
     </div>
   );
 };

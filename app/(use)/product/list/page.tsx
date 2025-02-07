@@ -29,6 +29,7 @@ const page = () => {
   } = useProductList();
 
   return (
+    <>
     <div className={style.product_list}>
       <div className={style.row}>
         <div className={style.searchForm}>
@@ -72,12 +73,7 @@ const page = () => {
           text="Add Product"
           onClick={handleOpenPopup}
         />
-        <AddProductList
-          handleOpenPopup={handleOpenPopup}
-          headerPopup={headerPopupProductList}
-          isOpen={isPopupProductListOpen}
-          onClick={hanldeAdd}
-        />
+        
       </div>
       <Table<DataTypeTableProduct>
         scroll={{ x: "100%", y: "calc(100vh - 305px)" }}
@@ -86,7 +82,14 @@ const page = () => {
         ref={tblRef}
         dataSource={dataSource}
       />
+
     </div>
+    <AddProductList
+          handleOpenPopup={handleOpenPopup}
+          isOpen={isPopupProductListOpen}
+            />
+    </>
+
   );
 };
 

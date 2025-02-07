@@ -7,6 +7,7 @@ interface dataListProps {
   minWidth?: string;
   value?: string;
   setValue(value: any): void;
+  placeholder?: string;
 }
 const DataList: React.FC<dataListProps> = ({
   options,
@@ -14,11 +15,12 @@ const DataList: React.FC<dataListProps> = ({
   minWidth,
   value = "",
   setValue,
+  placeholder
 }) => {
   return (
     <div className={style.datalist}>
       <label htmlFor="datalist" className={style.label}>{label}</label>
-      <Input value={value} setValue={setValue} minWidth={minWidth} list="options" id="datalist"></Input>
+      <Input value={value} setValue={setValue} minWidth={minWidth} list="options" id="datalist" placeholder={placeholder}></Input>
       <datalist id="options">
         {options.map((option) => (
           <option key={option}>{option}</option>

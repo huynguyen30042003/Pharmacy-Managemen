@@ -1,10 +1,11 @@
 .popup {
+
   position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 50;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background: rgba(30, 30, 30, 0.5);
   .popupInner {
     max-width: calc(100% - 64px);
