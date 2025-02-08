@@ -42,6 +42,7 @@ const AddProductList: React.FC<props> = ({ isOpen, handleOpenPopup }) => {
       isOpen={isOpen}
       handleOpenPopup={handleOpenPopup}
       width="726px"
+      height="654px"
       header={headerPopup}
       handleSave={handleSave}
     >

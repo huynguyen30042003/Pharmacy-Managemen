@@ -5,7 +5,7 @@ import Button from "../button/Button";
 interface PopupProps {
   isOpen: boolean;
   width: string;
-  // height: string;
+  height: string;
   children: React.ReactNode;
   handleOpenPopup: () => void;
   header: string;
@@ -15,6 +15,7 @@ interface PopupProps {
 }
 const Popup: React.FC<PopupProps> = ({
   width,
+  height,
   header,
   isOpen,
   children,
@@ -34,7 +35,7 @@ const Popup: React.FC<PopupProps> = ({
         <div className={style.popupHeader}>
           <h2>{header}</h2>
         </div>
-        <div className={style.popupContent}>{children}</div>
+        <div className={style.popupContent} style={{ maxHeight:height }}>{children}</div>
         <div className={style.popupFooter}>
           <Button
             width="100%"
